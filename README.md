@@ -1,4 +1,4 @@
-# Criação de Loterias em Diferentes Linguagens de Programação
+# Simulação de Loterias em Diferentes Linguagens de Programação
 
 Atualmente estão disponíveis as linguagens:
 
