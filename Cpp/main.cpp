@@ -6,13 +6,15 @@
 #include <set>
  
 using namespace std;
+set<set<int>> jogos;
 
 set<int> cria_jogo(int numeros){
-    set<int> jogo; 
+    set<int> jogo;
     while (jogo.size() < numeros){
         int r =  rand() % 60 + 1;
         jogo.insert(r);
     }
+    jogos.insert(jogo);
     return jogo;
 }
 
@@ -26,6 +28,9 @@ void print_set(set<int> st){
 
 bool aposta(set<int> sorteio, int numeros){
     set<int> jogo_principal = cria_jogo(numeros);
+    while (jogos.find(jogo_principal) == jogos.end()){
+        jogo_principal = cria_jogo(numeros);
+    }
     if (includes(jogo_principal.begin(), jogo_principal.end(),
                   sorteio.begin(), sorteio.end())){
         return true;
