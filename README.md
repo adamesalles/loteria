@@ -4,6 +4,7 @@ Atualmente estão disponíveis as linguagens:
 
  - Python
  - Javascript
+ - C++
 
 ## Python
 
